@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext'
 import {Link, useHistory} from 'react-router-dom';
 
+import logo from '../../images/logo.2.png';
 import './styles.scss';
 
 
@@ -33,9 +34,11 @@ export default function Login() {
 
     return (
         <div className="login-form">
-            <div className="logo"></div>
+            <div className="logo">
+                <img src={logo} alt="logo"></img>
+            </div>
             <form className="login-form-submit" onSubmit={handleSubmit}>
-                {error && <p>error</p>}
+                {error && <p>Error</p>}
                 <div className="login-form-submit-email">
                 <input type="email" placeholder="Email" ref={emailRef} required></input>
                 </div>
@@ -43,7 +46,7 @@ export default function Login() {
                 <input type="password" placeholder="Password" ref={passwordRef} required></input>
                 </div>
                 <button disabled={loading} className="submit" type="submit">Log In</button>
-                <div className="create-account"> Don't have an account ? <Link to="/signin"> Sign Up </Link> </div>
+                <div className="create-account"> Don't have an account ? <Link to="/signup"> Sign Up </Link> </div>
             </form>
         </div>
     )

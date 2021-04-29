@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext'
 import { Link } from 'react-router-dom';
 
+import logo from '../../images/logo.2.png';
 import './styles.scss';
 
 export default function Signup() {
@@ -34,7 +35,9 @@ export default function Signup() {
 
     return (
         <div className="signup-form">
-            <div className="logo"></div>
+            <div className="logo">
+                <img src={logo} alt="logo"></img>
+            </div>
             <form className="signup-form-submit" onSubmit={handleSubmit}>
                 {error && <p>error</p>}
                 <div className="signup-form-submit-name" >
