@@ -1,6 +1,9 @@
-*{
-    padding: 0;
-    margin: 0;
+.main-ingredients {
+    padding-top: 10px;
+    height: 90px;
+    display:flex;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-x: auto;
 }
-
-

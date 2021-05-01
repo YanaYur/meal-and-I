@@ -1,0 +1,34 @@
+$primarycolor:#ADEFD1FF;
+$secondarycolor:#00203FFF;
+
+.random-meal-card {
+    background-image: url(../../assets/images/random.jpg);
+    object-fit: none;
+    object-position: 5px 10%;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    &__cover {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 300px solid $secondarycolor;
+        border-right: 377px solid transparent;
+    }
+
+    &__button {
+        position: absolute;
+
+        button {
+            width: 60px;
+            height: 60px;
+            border-radius: 60%;
+        }
+    }
+}

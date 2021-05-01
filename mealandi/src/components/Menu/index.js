@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { AiOutlineHome, AiOutlineSearch,AiFillStar, AiOutlineUser} from "react-icons/ai";
 
 
 import './styles.scss';
@@ -7,10 +8,10 @@ import './styles.scss';
 const Menu=()=>{
     return(
         <div className="menu-buttons">
-            <button className="buttons"><i className="icon"></i><Link to="/"> Home</Link></button>
-            <button className="buttons"><i className="icon"></i><Link to="/search"> Search</Link></button>
-            <button className="buttons"><i className="icon"></i><Link to="/favorites">Favorites</Link></button>
-            <button className="buttons"><i className="icon"></i><Link to="/profile"> Profile</Link></button>
+            <button className="buttons"><Link to="/"><AiOutlineHome /></Link></button>
+            <button className="buttons"><Link to="/search"> <AiOutlineSearch/></Link></button>
+            <button className="buttons"><Link to="/favorites"><AiFillStar/></Link></button>
+            <button className="buttons"><Link to="/profile"><AiOutlineUser/></Link></button>
         </div>
     )
 }

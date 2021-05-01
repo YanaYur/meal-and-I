@@ -1,39 +1,50 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import Header from '../../components/Header'
 import Title from '../../components/Title'
-import Card from '../../components/Card'
 import Menu from '../../components/Menu'
+import Random from '../../components/Random'
+import MainIngredients from '../../components/MainIngredient';
+import Logic from '../../Logic/meals';
+import TrendyMeals from '../../components/TrendyMeals';
 
 const Home = () => {
-  
+
+  const [ingredients, setIngredients] = useState(null);
+  // const [trendy, setTrendy] = useState(null);
+
+  useEffect(() => {
+
+    const fetchData = async () => {
+      setIngredients(null);
+     
+
+      // const mainIngredients = await Logic.getMainIngredients();
+      // dispatch(setNewWeather(weatherCity));
+      setIngredients([]);
+
+      // const trendy = await Logic.getTrendyMeals();
+
+      // // dispatch(setNewForecast(weatherWeek));
+      // setTrendy(trendy);
+    };
+    fetchData();
+  }, []);
+
   return (
-      <>
+    <>
       <div className="home">
         <Header />
-      </div>
-      <div className='title'>
         <Title name="Main ingredients" />
-      </div>
-      <div className="card">
-        <Card/>
-      </div>
-      <div className='title'>
-        <Title name="Popular dishes"/>
-      </div>
-      <div className="card">
-        <Card/>
-      </div>
-      <div className='title'>
-        <Title name="Random Meal"/>
-      </div>
-      <div className="card">
-        <Card/>
+        <MainIngredients data={ingredients}/>
+        <TrendyMeals data={ingredients}/>
+        <Random/>
+        
       </div>
       <div className="menu">
-        <Menu/>
+        <Menu />
       </div>
-      </>
-    );
+    </>
+  );
 }
 
 export default Home;

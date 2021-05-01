@@ -1,23 +1,30 @@
 import React from 'react';
+import IngredientCard from './IngredientCard';
+import './styles.scss';
 
-import'./styles.scss';
-
-
-function mainIngredient(main) {
-    const { meals } = main ;
-    return meals.map(ing => <div className="ingredient-item">
-        <div className="ingredient">{ing.strIngredient}</div>
-        <img src={`${process.env.REACT_APP_IMG_URL_BASE}${ing.strIngredient}-Small.png`} alt="icon"></img>
-    </div>);
+function loading() {
+    return (
+        <div>Loading...</div>
+    )
 }
 
-const mainIngredients = ({ newData }) => {
+function ingredientList(ingredients) {
+    return [<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/> ]
+
+    // return ingredients.map(ing => <div className="ingredient-item">
+    //     <div className="ingredient">{ing.strIngredient}</div>
+    //     <img src={`${process.env.REACT_APP_IMG_URL_BASE}${ing.strIngredient}-Small.png`} alt="icon"></img>
+    // </div>);
+}
+
+const MainIngredients = ({ data }) => {
     return (
-        <div key="ingredients" className="main-ingredients">
-        {mainIngredient({newData})}   
-       
+        <div className="main-ingredients">
+            
+            {data ? ingredientList(data) : loading()}
+            
         </div>
     );
 }
 
-export default mainIngredients;
+export default MainIngredients;

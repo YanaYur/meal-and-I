@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext'
 import {Link, useHistory} from 'react-router-dom';
 
-import logo from '../../images/logo.2.png';
+import logo from '../../assets/images/logo.2.png';
 import './styles.scss';
 
 

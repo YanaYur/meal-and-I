@@ -1,0 +1,19 @@
+$primarycolor:#ADEFD1FF;
+$secondarycolor:#00203FFF;
+
+.ingredient-card{
+    background-color: $secondarycolor;
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+    &__image{
+        width: 70px;
+        height:70px;
+
+    }
+}

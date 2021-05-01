@@ -19,4 +19,4 @@ async function getRandomMeal() {
 
 
 
-export {getMainIngredients, getRandomMeal, getTrendyMeals};
+export default {getMainIngredients, getRandomMeal, getTrendyMeals};
