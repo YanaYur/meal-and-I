@@ -9,12 +9,8 @@ function loading() {
 }
 
 function ingredientList(ingredients) {
-    return [<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/>,<IngredientCard/> ]
-
-    // return ingredients.map(ing => <div className="ingredient-item">
-    //     <div className="ingredient">{ing.strIngredient}</div>
-    //     <img src={`${process.env.REACT_APP_IMG_URL_BASE}${ing.strIngredient}-Small.png`} alt="icon"></img>
-    // </div>);
+    
+    return ingredients.map(ing => <IngredientCard data={ing}/>);
 }
 
 const MainIngredients = ({ data }) => {
