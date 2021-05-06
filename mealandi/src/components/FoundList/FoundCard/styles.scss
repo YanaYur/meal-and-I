@@ -1,0 +1,23 @@
+.meals-card{
+    width: 98%;
+    height: 170px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__image{
+       width: 100%;
+        height: 150px;
+        object-fit:none;
+    }
+    &__name{
+        margin-top: 5px;
+        font-size: 10px;
+        color:black;
+    }
+}
