@@ -2,25 +2,36 @@ $primarycolor:#ADEFD1FF;
 $secondarycolor:#00203FFF;
 
 .random-meal-card {
-    background-image: url(../../assets/images/random.jpg);
     object-fit: none;
     object-position: 5px 10%;
-    background-size: cover;
+    // background-size: cover;
     width: 100%;
-    height: 300px;
-    position: relative;
+    height: 230px;
+    // position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
-    
-
-    &__cover {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-bottom: 300px solid $secondarycolor;
-        border-right: 377px solid transparent;
+  
+    &__cover{
+        align-items: center;
+        padding-top:10px;
+        width: 100%;
+       
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        p{
+            width: 100%;
+            padding-top: 0;
+            margin: 0;
+            font-size: 15px;
+            margin-left: 5px;
+        }
     }
+
 
     &__button {
         position: absolute;
