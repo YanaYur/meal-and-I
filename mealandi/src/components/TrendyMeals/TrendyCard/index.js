@@ -1,20 +1,19 @@
-
+import {Link} from 'react-router-dom';
 import './styles.scss';
 
 
-const data =   {
-    "strMeal": "Baked salmon with fennel & tomatoes",
-    "strMealThumb": "https://www.themealdb.com/images/media/meals/xxyupu1468262513.jpg",
-    "idMeal": "52959"
-};
-
-const TrendyCard = () => {
+const TrendyCard = ({data}) => {
     return (
+        
         <div key={data.idMeal} className="trendy-card">
+            <Link to={{
+                pathname: "/detail",
+                search: `?mealId=${data.idMeal}`,
+            }}>
             <img className="trendy-card__image" src={data.strMealThumb} alt={data.strMeal}></img>
-            <div className="trendy-card__name" >{data.strMeal}
-           
+            <div className="trendy-card__name" ><p>{data.strMeal}</p>
             </div>
+            </Link>
         </div>
     );
 }

@@ -19,12 +19,7 @@ function loading() {
 }
 
 function trendyMealsList(data) {
-    return [<TrendyCard />,<TrendyCard />,<TrendyCard />];
-
-    // return ingredients.map(ing => <div className="ingredient-item">
-    //     <div className="ingredient">{ing.strIngredient}</div>
-    //     <img src={`${process.env.REACT_APP_IMG_URL_BASE}${ing.strIngredient}-Small.png`} alt="icon"></img>
-    // </div>);
+    return data.map(trendy => <TrendyCard data={trendy}/>);
 }
 
 const TrendyMeals = ({ data }) => {
