@@ -1,0 +1,20 @@
+{
+    "Brownie": {
+      "name": "Brownie",
+      "idMeal": "12345",
+      "strIngredient1": "Butter",
+      "strIngredient2": "Egg",
+      "strIngredient3": "Flour",
+      "strIngredient4": "Chocolate chips",
+      "strIngredient5": "Sugar",
+      "strIngredient6": "Walnuts",
+      "strMeasure1": "1/2 cup",
+      "strMeasure2": "2",
+      "strMeasure3": "1 cup",
+      "strMeasure4": "1 cup",
+      "strMeasure5": "1/2 cup ",
+      "strMeasure6": "1/2 cup",
+      "strInstructions": "Step 1. Preheat oven to 175ºC. Step 2. Grease 8×8 inch (20×20 cm) pan. Step 3. Combine butter or margarine and chocolate chips in saucepan on low heat. Stir often until melted. Do not overheat. Remove to a hot pad.Step 4. Beat eggs in mixing bowl until frothy. Add sugar and vanilla. Beat to mix. Add chocolate mixture to this mixture. Stir. Step 5. Add flour and walnuts. Stir just until moistened. Step 6. Scrape batter into pan. Spread evenly.Step 7. Bake in oven for 25 minutes. Cool brownies before cutting.",
+      "image": "brownie.png"
+    }
+}
