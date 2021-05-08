@@ -1,18 +1,14 @@
+import { UPDATE_SELECTED_INGREDIENTS } from '../types';
+
 // export function setUser(name) {
 //     return { type: "SET_USER", payload: name };
 // }
 
-export function setMeals(meals) {
-    return { type: "SET_MEALS", payload: meals };
+export function updateSelectedIngredients(ingredients) {
+    return { type: UPDATE_SELECTED_INGREDIENTS, payload: ingredients };
 }
 
-export function setIngredients(ingredients) {
-    return { type: "SET_INGREDIENTS", payload: ingredients };
-}
-export function setDetail(detail){
-    return {type:"SET_DETAIL", payload: detail};
-}
 
-export function setFavorite(meal){
-    return {type:"SET_FAVORITE", payload:meal}
-}
+// export function setFavorite(meal){
+//     return {type:"SET_FAVORITE", payload:meal}
+// }

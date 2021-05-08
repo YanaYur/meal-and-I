@@ -8,29 +8,36 @@ function loading() {
     )
 }
 
-function detailMeal(meal) {
+function detailMeal(data) {
     return (
-        <div key={meal.idMeal} className="detail-meal">
+        <div key={data.idMeal} className="detail-meal">
+            <div className="detail-meal__buttons">
              <button type="button" className="back" value="click" ><AiOutlineLeft /></button>
              <button type="button" className="back" value="click" ><AiOutlineStar /></button>
-            <img className="detail-meal__image" src={meal.strMealThumb} alt={meal.strMeal}></img>
-            <div className="detail-meal__name">{meal.strMeal}</div>
-            <div className="detail-meal__ingredients">{meal.strMeasure1} {meal.strIngredient1}</div>
-            <div className="detail-meal__ingredients">{meal.strMeasure2} {meal.strIngredient2}</div>
-            <div className="detail-meal__ingredients">{meal.strMeasure3} {meal.strIngredient3}</div>
-            <div className="detail-meal__ingredients">{meal.strMeasure4} {meal.strIngredient4}</div>
-            <div className="detail-meal__ingredients">{meal.strMeasure5} {meal.strIngredient5}</div>
-            <div className="detail-meal__instructions">{meal.strInstructions}</div>
+            </div>
+            <img className="detail-meal__image" src={data.strMealThumb} alt={data.strMeal}></img>
+            <div className="detail-meal__name">{data.strMeal}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure1} {data.strIngredient1}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure2} {data.strIngredient2}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure3} {data.strIngredient3}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure4} {data.strIngredient4}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure5} {data.strIngredient5}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure6} {data.strIngredient6}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure7} {data.strIngredient7}</div>
+            <div className="detail-meal__ingredients">{data.strMeasure8} {data.strIngredient8}</div>
+            <div className="detail-meal__wrapper">
+            <div className="detail-meal__instructions">{data.strInstructions}</div>
+            </div>
         </div>);
 
 };
 
 
-const DetailCard = ({ data }) => {
-   
+const DetailCard = ({data}) => {
+   debugger
     return (
         <div className="detail-info">
-
+      
             {data ? detailMeal(data) : loading()}
 
         </div>
