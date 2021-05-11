@@ -12,7 +12,7 @@ const SelectedFormFilters = ({ ingredients, handleRemove }) => {
 
     return (
 
-        <div key="id" className="choosen-ingredients">
+        <div key="choosen" className="choosen-ingredients">
             {SelectedIngredient(ingredients, handleRemove)}
         </div>
 

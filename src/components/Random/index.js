@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Title from '../Title/index'
 import { ImMagicWand } from 'react-icons/im'
@@ -13,7 +13,10 @@ function loading() {
 
 const Random = ({ data, handleUpdateRandom }) => {
    
-    
+    const handleRandom = (e) => {
+        e.preventDefault();
+        handleUpdateRandom();
+    }
 
     return (
         <>
@@ -23,7 +26,7 @@ const Random = ({ data, handleUpdateRandom }) => {
                     <div className="random-meal-card__cover">
                         <Link to={{
                             pathname: "/detail",
-                            search: `?meal=${data.meals[0].idMeal}`,
+                            search: `?mealId=${data.meals[0].idMeal}`,
                         }}>
                             <img src={data.meals[0].strMealThumb} alt={data.meals[0].strMeal}></img>
                             <p>{data.meals[0].strMeal}</p>
@@ -31,7 +34,7 @@ const Random = ({ data, handleUpdateRandom }) => {
                     </div>
                     : loading()}
                 <div className="random-meal-card__button">
-                    <button type="button" value="click" onClick={handleUpdateRandom}><ImMagicWand /></button>
+                    <button type="button" value="click" onClick={handleRandom}><ImMagicWand /></button>
                 </div>
             </div>
         </>
