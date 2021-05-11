@@ -15,19 +15,15 @@ async function getTrendyMeals() {
 
 async function getRandomMeal() {
     const { data } = await axios(`${process.env.REACT_APP_API_URL_BASE}random.php`);
-
     return data;
 }
 
 async function getByIngredients(selectedIngredients) {
     const requests = selectedIngredients.map(getMealByIngredient);
-
     return Promise.all(requests).then((results) => results);
-
 }
 
 async function getMealByIngredient(selectedIngredients) {
-    debugger
     const { data } = await axios(`${process.env.REACT_APP_API_URL_BASE}filter.php?i=${selectedIngredients}`);
     const safeData = data.meals || [];
     const newData = safeData.slice(0, 5);
@@ -35,11 +31,18 @@ async function getMealByIngredient(selectedIngredients) {
 }
 
 async function getMealById(id) {
-   
     const { data } = await axios(`${process.env.REACT_APP_API_URL_BASE}lookup.php?i=${id}`);
-    
     return data;
 }
 
+async function getMealsByIds(ids) {
+    const requests = ids.map(getMealById);
+    const res = await Promise.all(requests).then((results) => results);
 
-export default { getByIngredients, getMainIngredients, getRandomMeal, getTrendyMeals, getMealByIngredient, getMealById };
+    return res.reduce((acc, curr) => {
+        return [...acc.meals, ...curr.meals];
+    });
+}
+
+
+export default { getByIngredients, getMealsByIds, getMainIngredients, getRandomMeal, getTrendyMeals, getMealByIngredient, getMealById };
