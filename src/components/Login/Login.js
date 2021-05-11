@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext'
-import {Link, useHistory} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/acctions';
 
 import logo from '../../assets/images/logo.2.png';
 import './styles.scss';
@@ -14,7 +16,8 @@ export default function Login() {
     const { login } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    const history=useHistory();
+    const history = useHistory();
+    const dispatch = useDispatch();
 
 
     async function handleSubmit(e) {
@@ -23,8 +26,9 @@ export default function Login() {
         try {
             setError('');
             setLoading(true);
-            await login(emailRef.current.value, passwordRef.current.value)
-            history.push("/")
+            await login(emailRef.current.value, passwordRef.current.value);
+
+            history.push("/home")
 
         } catch {
             setError('Failed to create an account')
@@ -40,10 +44,10 @@ export default function Login() {
             <form className="login-form-submit" onSubmit={handleSubmit}>
                 {error && <p>Error</p>}
                 <div className="login-form-submit-email">
-                <input type="email" placeholder="Email" ref={emailRef} required></input>
+                    <input type="email" placeholder="Email" ref={emailRef} required></input>
                 </div>
                 <div className="login-form-submit-password">
-                <input type="password" placeholder="Password" ref={passwordRef} required></input>
+                    <input type="password" placeholder="Password" ref={passwordRef} required></input>
                 </div>
                 <button disabled={loading} className="submit" type="submit">Log In</button>
                 <div className="create-account"> Don't have an account ? <Link to="/signup"> Sign Up </Link> </div>

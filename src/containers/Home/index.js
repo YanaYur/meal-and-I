@@ -19,12 +19,11 @@ const Home = () => {
       setIngredients(null);
 
       const mainIngredients = await Logic.getMainIngredients();
-      // dispatch(setNewWeather(weatherCity));
+
       setIngredients(mainIngredients);
 
       const trendy = await Logic.getTrendyMeals();
 
-      // // dispatch(setNewForecast(weatherWeek));
       setTrendy(trendy);
 
       const randomGenerated = await Logic.getRandomMeal();
@@ -49,9 +48,7 @@ const Home = () => {
         <TrendyMeals data={trendy} />
         <Random data={random} handleUpdateRandom={handleUpdateRandom} />
       </div>
-      <div className="menu">
         <Menu />
-      </div>
     </>
   );
 }

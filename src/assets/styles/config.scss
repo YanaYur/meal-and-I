@@ -5,6 +5,12 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0;
-    font-family: "Nixie One", cursive;
+    font-family: 'Roboto Mono', monospace;
     color: black;
+    
+    a{
+        text-decoration: none;
+        font-size: 14px;
+        color: black;
+    }
 }

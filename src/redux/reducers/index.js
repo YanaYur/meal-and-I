@@ -1,11 +1,21 @@
-const defaultUser = { email: "", username: ""};
+import { UPDATE_SELECTED_INGREDIENTS, SET_FAVOURITE, SET_USER } from '../types';
 
-export default function userReducer( user = defaultUser, action) {
+const defaultInfo = {
+    selectedIngredients: [],
+    favorites:['52772','52773'],
+    user:undefined
+};
+
+
+export default function mealsReducer(state = defaultInfo, action) {
     switch (action.type) {
-        case "SET_USER":
-            return { ...action.payload}
-    
+        case UPDATE_SELECTED_INGREDIENTS:
+            return { ...state, selectedIngredients: [...action.payload] }
+        case SET_FAVOURITE:
+                return {...state, favorites: action.payload}
+        case SET_USER:
+            return {...state, user: action.payload}
         default:
-            return user;
+            return defaultInfo;
     }
 }

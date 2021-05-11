@@ -1,38 +1,40 @@
 import { React, useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Header from '../../components/Header';
 import Menu from '../../components/Menu'
 import SearchForm from '../../components/SearchForm';
-// import SelectedFormFilters from '../../components/SelectedFormFilters';
 import Title from '../../components/Title';
 import FoundList from '../../components/FoundList';
 import Logic from '../../Logic/meals';
 
+import { updateSelectedIngredients } from '../../redux/acctions';
+import { ingredientsSelector } from '../../redux/selectors/selectors';
+import { useDispatch } from 'react-redux';
+
 const Search = () => {
 
-  const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const dispatch = useDispatch();
+  const selectedIngredients = useSelector(ingredientsSelector);
   const [meals, setMeals] = useState([]);
 
 
-  // useEffect(() => {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params) {
+      handleAdd(params.get('ingredient'));
+    }
 
-  //   const params = new URLSearchParams(window.location.search);
-
-  //   if (params) {
-  //     handleAdd(params.get('ingredient'));
-
-    
-  //   }
-
-
-  // }, []);
-
+  }, []);
 
 
   async function handleSearch() {
 
     const search = await Logic.getMealByIngredient(selectedIngredients);
+    const flatResults = search.reduce((acc, curr) => {
+      return [...acc, curr];
+    }, []);
 
-    setMeals(search);
+    setMeals(flatResults);
 
   }
 
@@ -40,7 +42,7 @@ const Search = () => {
 
     if (ing) {
 
-      setSelectedIngredients([...selectedIngredients, ing]);
+      dispatch(updateSelectedIngredients([...selectedIngredients, ing]));
 
     } else {
       console.log('Please enter ingredient')
@@ -52,7 +54,7 @@ const Search = () => {
     const copy = [...selectedIngredients]
     copy.splice(index, 1)
 
-    setSelectedIngredients(copy);
+    dispatch(updateSelectedIngredients(copy));
   }
 
 

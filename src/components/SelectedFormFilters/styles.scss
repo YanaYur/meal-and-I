@@ -19,9 +19,9 @@
         border-radius: 10px;
         padding:2px;
     }
-    &__value:hover{
-        background-color:rgb(245, 76, 70);
-    }
+    // &__value:touch{
+    //     touch-action:rgb(245, 76, 70);
+    // }
 
     &__value__add{
         width: 50px;

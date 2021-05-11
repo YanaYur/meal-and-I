@@ -4,14 +4,6 @@ import TrendyCard from './TrendyCard/index';
 
 import './styles.scss';
 
-// function trendyMeals(data) {
-//     const { meals } = data;
-//     return meals.map(meal => <div className="trendy-meal">
-//         <div className="meal">{meal.strMeal}</div>
-//         <img src={`${meal.strMealThumb}`} alt="meal"></img>
-//     </div>);
-// }
-
 function loading() {
     return (
         <div>Loading...</div>
@@ -26,7 +18,7 @@ const TrendyMeals = ({ data }) => {
     return (
         <>
             <Title name="Trendy Meals"/>
-            <div className="trendy-meals">
+            <div key="123" className="trendy-meals">
 
                 {data ? trendyMealsList(data) : loading()}
 
