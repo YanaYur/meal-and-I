@@ -48,9 +48,7 @@ const Home = () => {
         <TrendyMeals data={trendy} />
         <Random data={random} handleUpdateRandom={handleUpdateRandom} />
       </div>
-      <div className="menu">
         <Menu />
-      </div>
     </>
   );
 }

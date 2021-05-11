@@ -18,22 +18,19 @@ const Search = () => {
   const [meals, setMeals] = useState([]);
 
 
-  // useEffect(() => {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params) {
+      handleAdd(params.get('ingredient'));
+    }
 
-  //   const params = new URLSearchParams(window.location.search);
-  //   debugger
-  //   if (params) {
-  //     handleAdd(params.get('ingredient'));
-  //   }
-
-  // }, []);
+  }, []);
 
 
   async function handleSearch() {
 
     const search = await Logic.getMealByIngredient(selectedIngredients);
     const flatResults = search.reduce((acc, curr) => {
-      debugger
       return [...acc, curr];
     }, []);
 
