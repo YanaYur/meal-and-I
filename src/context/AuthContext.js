@@ -39,14 +39,16 @@ export function AuthProvider({ children }) {
 
     useEffect(() => {
         const newUser = auth.onAuthStateChanged(user => {
-            const { uid, email } = user;
-            dispatch(setUser({ uid, email }));
-            setLoading(false);
+            if (user) {
+                const { uid, email } = user;
+                dispatch(setUser({ uid, email }));
+            }
 
+            setLoading(false);
         })
         return newUser;
     }, []);
-
+  
     return (
         <AuthContext.Provider value={value}>
             {!loading && children}
