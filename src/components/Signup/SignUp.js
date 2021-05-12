@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext'
 import { Link, useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+
 
 import logo from '../../assets/images/logo.2.png';
 import './styles.scss';
-import { setUser } from '../../redux/acctions';
+
 
 export default function Signup() {
 
@@ -18,7 +18,7 @@ export default function Signup() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const history = useHistory();
-    const dispatch = useDispatch();
+    
 
     async function handleSubmit(e) {
         e.preventDefault();

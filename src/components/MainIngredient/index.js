@@ -1,24 +1,19 @@
 import React from 'react';
 import IngredientCard from './IngredientCard';
+import Loader from '../Loader';
+
 import './styles.scss';
 
-function loading() {
-    return (
-        <div>Loading...</div>
-    )
-}
-
 function ingredientList(ingredients) {
-    
-    return ingredients.map(ing => <IngredientCard data={ing}/>);
+    return ingredients.map(ing => <IngredientCard key={ing.idIngredient} data={ing} />);
 }
 
 const MainIngredients = ({ data }) => {
     return (
         <div className="main-ingredients">
-            
-            {data ? ingredientList(data) : loading()}
-            
+
+            {data ? ingredientList(data) : <Loader/>}
+
         </div>
     );
 }

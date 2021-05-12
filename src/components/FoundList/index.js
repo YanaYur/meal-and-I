@@ -1,18 +1,12 @@
 import React from 'react';
-
 import FoundCard from './FoundCard/index';
+import Loader from '../Loader';
 
 import './styles.scss';
 
-function loading() {
-    return (
-        <div>Loading...</div>
-    )
-}
-
 function foundForPrint(data) {
 
-    return data.map(meal => <FoundCard data={meal} />);
+    return data.map(meal => <FoundCard  data={meal} />);
 }
 
 const FoundList = ({ data }) => {
@@ -21,7 +15,7 @@ const FoundList = ({ data }) => {
         <>
             <div className="found-meals">
 
-                {data && data.length > 0 ? foundForPrint(data) : loading()}
+                {data && data.length > 0 ? foundForPrint(data) : <Loader/>}
 
             </div>
         </>
