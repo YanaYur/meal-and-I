@@ -12,7 +12,7 @@ const UserProfile = ({ data }) => {
                 <div className="user__photo">
                     <img src={profile_photo} alt='hello'></img>
                 </div>
-                <div className="user__name"><strong>User</strong></div>
+                <div className="user__name"><strong>Foodie </strong></div>
                 <br></br>
                 <div className="user__email"><strong>Email:</strong> {data.email}</div>
                 <br></br>

@@ -59,7 +59,6 @@ const Search = () => {
 
 
   function handlUpdateOptions(ingredientName) {
-    debugger
     setOptions(Logic.getIngredientsOptions(ingredientName))
   }
 
