@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from 'react';
 import Header from '../../components/Header'
-import Title from '../../components/Title'
 import Menu from '../../components/Menu'
 import Random from '../../components/Random'
 import MainIngredients from '../../components/MainIngredient';
@@ -43,12 +42,11 @@ const Home = () => {
     <>
       <div className="home">
         <Header />
-        <Title name="Main ingredients" />
         <MainIngredients data={ingredients} />
         <TrendyMeals data={trendy} />
         <Random data={random} handleUpdateRandom={handleUpdateRandom} />
       </div>
-        <Menu />
+      <Menu />
     </>
   );
 }

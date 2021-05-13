@@ -6,7 +6,7 @@ import './styles.scss';
 
 function foundForPrint(data) {
 
-    return data.map(meal => <FoundCard  data={meal} />);
+    return data.map(meal => <FoundCard key={meal.idMeal} data={meal} />);
 }
 
 const FoundList = ({ data }) => {

@@ -5,7 +5,7 @@ import './styles.scss';
 const TrendyCard = ({data}) => {
     return (
         
-        <div key={data.idMeal} className="trendy-card">
+        <div className="trendy-card">
             <Link to={{
                 pathname: "/detail",
                 search: `?mealId=${data.idMeal}`,

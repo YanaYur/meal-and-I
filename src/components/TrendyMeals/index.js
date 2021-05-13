@@ -7,7 +7,7 @@ import './styles.scss';
 
 function trendyMealsList(data) {
 
-    return data.map(trendy => <TrendyCard  data={trendy} />);
+    return data.map(trendy => <TrendyCard key={trendy.idMeal}  data={trendy} />);
 }
 
 const TrendyMeals = ({ data }) => {
