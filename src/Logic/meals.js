@@ -11,7 +11,7 @@ function getIngredientsOptions(input) {
 
 async function getMainIngredients() {
     const { data } = await axios.get(`${process.env.REACT_APP_API_URL_BASE}list.php?i=list`);
-    const newData = data.meals.slice(0, 10);
+    const newData = data.meals.slice(0, 15);
     return newData;
 }
 
@@ -45,11 +45,7 @@ async function getMealById(id) {
 
 async function getMealsByIds(ids) {
     const requests = ids.map(getMealById);
-    const res = await Promise.all(requests).then((results) => results);
-
-    return res.reduce((acc, curr) => {
-        return [...acc.meals, ...curr.meals];
-    });
+    return await Promise.all(requests).then((results) => results.map(res => res.meals[0]));
 }
 
 
