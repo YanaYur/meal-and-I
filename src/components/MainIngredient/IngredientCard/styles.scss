@@ -1,8 +1,7 @@
-$primarycolor:#ADEFD1FF;
-$secondarycolor:#00203FFF;
+
 
 .ingredient-card{
-    background-color: $secondarycolor;
+    background-color: #f37571;
     width: 70px;
     height: 70px;
     margin-left: 5px;
@@ -14,6 +13,5 @@ $secondarycolor:#00203FFF;
     &__image{
         width: 70px;
         height:70px;
-
     }
 }

@@ -15,7 +15,7 @@ const FoundList = ({ data }) => {
         <>
             <div className="found-meals">
 
-                {data && data.length > 0 ? foundForPrint(data) : <Loader/>}
+                {data ? foundForPrint(data) : <Loader/>}
 
             </div>
         </>

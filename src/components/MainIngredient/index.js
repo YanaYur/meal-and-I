@@ -1,6 +1,7 @@
 import React from 'react';
 import IngredientCard from './IngredientCard';
 import Loader from '../Loader';
+import Title from '../../components/Title';
 
 import './styles.scss';
 
@@ -10,11 +11,14 @@ function ingredientList(ingredients) {
 
 const MainIngredients = ({ data }) => {
     return (
-        <div className="main-ingredients">
+        <>
+            <Title name="CHOOSE MAIN INGREDIENT" />
+            <div className="main-ingredients">
 
-            {data ? ingredientList(data) : <Loader/>}
+                {data ? ingredientList(data) : <Loader />}
 
-        </div>
+            </div>
+        </>
     );
 }
 

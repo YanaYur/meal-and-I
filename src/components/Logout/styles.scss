@@ -1,0 +1,23 @@
+.logout {
+    display: flex;
+    justify-content: center;
+    button {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        font-size: 16px;
+        color: rgb(247, 247, 247);
+        border: 1px solid #ff914d;
+        background-color: #ffbb99;
+        svg {
+            color: #f5f1ef;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

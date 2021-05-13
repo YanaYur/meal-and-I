@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-
 import { AiOutlineLogout } from "react-icons/ai";
+
+import './styles.scss';
 
 export default function Logout() {
     const [error, setError] = useState("");

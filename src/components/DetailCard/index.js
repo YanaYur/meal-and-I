@@ -1,13 +1,7 @@
 import { AiOutlineLeft, AiOutlineStar, AiFillStar } from 'react-icons/ai'
-
+import Loader from '../Loader';
 
 import './styles.scss';
-
-function loading() {
-    return (
-        <div>Loading...</div>
-    )
-}
 
 function detailMeal(data, handleClick, toggleFavorites) {
 
@@ -44,7 +38,7 @@ function detailMeal(data, handleClick, toggleFavorites) {
 const DetailCard = ({ data, handleClick, toggleFavorites, favs }) => {
     return (
         <div className="detail-info">
-            {data ? detailMeal(data, handleClick, toggleFavorites) : loading()}
+            {data ? detailMeal(data, handleClick, toggleFavorites) : <Loader/>}
         </div>
     );
 };

@@ -18,7 +18,7 @@ export default function Signup() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const history = useHistory();
-    
+
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -61,9 +61,9 @@ export default function Signup() {
                 <div className="signup-form-submit-password-confirmation">
 
                     <input type="password" placeholder="password confirmation" ref={passwordConfirmRef} required></input>
-                    <button disabled={loading} className="submit" type="submit">Sign Up</button>
+                    <button disabled={loading} className="submit" type="submit"><strong>Sign Up</strong></button>
                 </div>
-                <div>Already have an account <Link to="/">Log In </Link> </div>
+                <div className="already-have">Already have an account? <Link to="/"><strong>Login</strong></Link> </div>
             </form>
         </div>
     )

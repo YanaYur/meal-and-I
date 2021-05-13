@@ -1,22 +1,22 @@
-.user{
-    
+.user {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     padding-top: 15px;
     width: 100%;
-    height: 75vh;
-    &__photo{
+    height: 70vh;
+    &__photo {
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 200px;
-        img{
-           
+        object-fit: contain;
+        
+        img {
             border-radius: 50%;
-            width: 200px;
+            width: 220px;
             height: 200px;
         }
     }

@@ -7,16 +7,17 @@
     border-radius: 5px;
     flex-direction: column;
     position: relative;
-    
+    padding-top: 7px;
 
     &__image{
        width: 100%;
         height: 150px;
+        border-radius: 5px;
         object-fit:none;
     }
     &__name{
         padding-bottom: 10px;
-        font-size: 15px;
+        font-size:13px;
         color:black;
     }
 }

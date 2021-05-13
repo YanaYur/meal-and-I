@@ -24,23 +24,28 @@
                 border: none;
                 cursor: pointer;
                 outline-offset: 4px;
-                
+
                 svg {
                     width: 100%;
                     height: 100%;
                     color: rgb(122, 121, 121);
-                    
+                }
+                svg:hover {
+                    fill: rgb(230, 135, 91);
                 }
             }
             .fav {
                 @extend .back;
+
                 svg {
                     width: 100%;
                     height: 100%;
                     color: rgb(255, 233, 32);
                 }
+                svg:hover {
+                    fill: rgb(230, 135, 91);
+                }
             }
-            
         }
 
         &__image {

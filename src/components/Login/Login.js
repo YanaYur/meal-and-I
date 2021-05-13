@@ -47,8 +47,8 @@ export default function Login() {
                 <div className="login-form-submit-password">
                     <input type="password" placeholder="Password" ref={passwordRef} required></input>
                 </div>
-                <button disabled={loading} className="submit" type="submit">Log In</button>
-                <div className="create-account"> Don't have an account ? <Link to="/signup"><strong>Sign Up</strong></Link> </div>
+                <button disabled={loading} className="submit" type="submit"><strong>Login</strong></button>
+                <div className="create-account"> Don't have an account? <Link to="/signup"><strong>Sign Up</strong></Link> </div>
             </form>
         </div>
     )

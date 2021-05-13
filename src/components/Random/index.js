@@ -15,7 +15,7 @@ const Random = ({ data, handleUpdateRandom }) => {
 
     return (
         <>
-            <Title name="Generated Random Meal" />
+            <Title name="GENERATE RANDOM MEAL" />
             <div className="random-meal-card">
                 {data ?
                     <div className="random-meal-card__cover">

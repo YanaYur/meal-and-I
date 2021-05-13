@@ -13,7 +13,7 @@ function trendyMealsList(data) {
 const TrendyMeals = ({ data }) => {
     return (
         <>
-            <Title name="Trendy Meals" />
+            <Title name="CHECK OUT THIS TRENDY SELECTION" />
             <div className="trendy-meals">
 
                 {data ? trendyMealsList(data) : <Loader/>}
