@@ -2,7 +2,7 @@ import { UPDATE_SELECTED_INGREDIENTS, SET_FAVOURITE, SET_USER } from '../types';
 
 const defaultInfo = {
     selectedIngredients: [],
-    favorites:['52772','52773'],
+    favorites:['52772'],
     user:undefined
 };
 

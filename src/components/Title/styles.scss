@@ -1,11 +1,14 @@
-$primarycolor:#ADEFD1FF;
-$secondarycolor:#00203FFF;
+
 
 .title{
     width: 100%;
-    background-color:$primarycolor;
+    background-color:transparent;
+    color: #ff9966;
     height: auto;
     margin-bottom: 5px;
+    border-bottom: 1px solid #c5c5c5;
+    font-size:13px;
+    padding-left:5px;
     
     h4{
         margin: 0;

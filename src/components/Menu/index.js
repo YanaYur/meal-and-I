@@ -13,26 +13,26 @@ const Menu = () => {
     return (
         <div className="menu-buttons">
 
-            <button className="menu-buttons__buttons">
+            <button value="click" className="menu-buttons__buttons">
                 {path === "/home" ?
                     (<Link to="/home"><AiFillHome /></Link>) :
                     (<Link to="/home"><AiOutlineHome /></Link>)
                 }
             </button>
 
-            <button className="menu-buttons__buttons">
+            <button value="click" className="menu-buttons__buttons">
                 {path === "/search" || path==="/detail" ?
                     <Link to="/search"> <FaSearch /></Link> :
                     <Link to="/search"> <AiOutlineSearch /></Link>
                 }
             </button>
-            <button className="menu-buttons__buttons">
+            <button value="click" className="menu-buttons__buttons">
                 {path === "/favorites" ?
                     <Link to="/favorites"><AiFillStar /></Link> :
                     <Link to="/favorites"> <AiOutlineStar /></Link>
                 }
             </button>
-            <button className="menu-buttons__buttons">
+            <button value="click" className="menu-buttons__buttons">
                 {path === "/profile" ?
                     <Link to="/profile"><FaUserAlt /></Link> :
                     <Link to="/profile"><AiOutlineUser /></Link>

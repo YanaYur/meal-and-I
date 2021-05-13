@@ -1,26 +1,22 @@
 import React from 'react';
 import Title from '../Title/index';
 import TrendyCard from './TrendyCard/index';
+import Loader from '../Loader';
 
 import './styles.scss';
 
-function loading() {
-    return (
-        <div>Loading...</div>
-    )
-}
-
 function trendyMealsList(data) {
-    return data.map(trendy => <TrendyCard data={trendy}/>);
+
+    return data.map(trendy => <TrendyCard key={trendy.idMeal}  data={trendy} />);
 }
 
 const TrendyMeals = ({ data }) => {
     return (
         <>
-            <Title name="Trendy Meals"/>
-            <div key="123" className="trendy-meals">
+            <Title name="CHECK OUT THIS TRENDY SELECTION" />
+            <div className="trendy-meals">
 
-                {data ? trendyMealsList(data) : loading()}
+                {data ? trendyMealsList(data) : <Loader/>}
 
             </div>
         </>

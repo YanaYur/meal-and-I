@@ -4,7 +4,7 @@ import './styles.scss';
 
 const FoundCard = ({ data }) => {
     return (
-        <div key={data.idMeal} className="meals-card">
+        <div className="meals-card">
             <Link to={{
                 pathname: "/detail",
                 search: `?mealId=${data.idMeal}`,

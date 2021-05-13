@@ -25,8 +25,6 @@ export function AuthProvider({ children }) {
 
     function signup(email, password) {
         return auth.createUserWithEmailAndPassword(email, password);
-
-
     }
 
     function login(email, password) {
@@ -39,10 +37,12 @@ export function AuthProvider({ children }) {
 
     useEffect(() => {
         const newUser = auth.onAuthStateChanged(user => {
-            const { uid, email } = user;
-            dispatch(setUser({ uid, email }));
-            setLoading(false);
+            if (user) {
+                const { uid, email, name } = user;
+                dispatch(setUser({ uid, email, name }));
+            }
 
+            setLoading(false);
         })
         return newUser;
     }, []);

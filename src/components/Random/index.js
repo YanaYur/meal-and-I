@@ -1,15 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Title from '../Title/index'
-import { ImMagicWand } from 'react-icons/im'
+import { ImMagicWand } from 'react-icons/im';
+import Loader from '../Loader';
 
 import './styles.scss';
-
-function loading() {
-    return (
-        <div>Loading...</div>
-    )
-}
 
 const Random = ({ data, handleUpdateRandom }) => {
    
@@ -20,7 +15,7 @@ const Random = ({ data, handleUpdateRandom }) => {
 
     return (
         <>
-            <Title name="Generated Random Meal" />
+            <Title name="GENERATE RANDOM MEAL" />
             <div className="random-meal-card">
                 {data ?
                     <div className="random-meal-card__cover">
@@ -32,7 +27,7 @@ const Random = ({ data, handleUpdateRandom }) => {
                             <p>{data.meals[0].strMeal}</p>
                         </Link>
                     </div>
-                    : loading()}
+                    : <Loader/>}
                 <div className="random-meal-card__button">
                     <button type="button" value="click" onClick={handleRandom}><ImMagicWand /></button>
                 </div>

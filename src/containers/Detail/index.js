@@ -34,7 +34,8 @@ const Detail = () => {
   }, [favoritesSelected]);
 
   function handleClick() {
-    history.push("/home");
+
+    history.goBack();
   };
 
   function toggleFavorites(mealId) {

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import brownie from '../../assets/images/brownie.png'
+import profile_photo from '../../assets/images/profile_photo.png';
 
 import './styles.scss';
 
@@ -10,10 +10,12 @@ const UserProfile = ({ data }) => {
         <>
             <div className="user">
                 <div className="user__photo">
-                    <img src={brownie} alt='hello'></img>
+                    <img src={profile_photo} alt='hello'></img>
                 </div>
-                <div className="user__name"><strong>Emily Smith</strong></div>
+                <div className="user__name"><strong>User</strong></div>
+                <br></br>
                 <div className="user__email"><strong>Email:</strong> {data.email}</div>
+                <br></br>
                 <div className="user__description"><strong>About me: </strong> I absolutely love cooking.
                 I can merrily state that my kitchen is my playground in every sense! My mother has always been a wonderful cook,
                  and I feel she is my inspiration. I have seen her prepare scrumptious meals for hundreds of guests in a few hours!

@@ -28,7 +28,7 @@ $secondarycolor:#00203FFF;
             width: 100%;
             padding-top: 0;
             margin: 0;
-            font-size: 15px;
+            font-size: 13px;
             margin-left: 5px;
         }
     }
@@ -38,9 +38,15 @@ $secondarycolor:#00203FFF;
         position: absolute;
 
         button {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 60%;
+            border:1px solid gray;
+            svg{
+                color: #ff9966;
+                width: 25px;
+                height: 25px;
+            }
         }
     }
 }

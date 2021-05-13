@@ -1,25 +1,19 @@
 import { AiOutlineLeft, AiOutlineStar, AiFillStar } from 'react-icons/ai'
-
+import Loader from '../Loader';
 
 import './styles.scss';
 
-function loading() {
-    return (
-        <div>Loading...</div>
-    )
-}
-
-function detailMeal(data, handleClick,toggleFavorites) {
+function detailMeal(data, handleClick, toggleFavorites) {
 
     return (
-        
+
         <div key={data.idMeal} className="detail-meal">
             <div className="detail-meal__buttons">
                 <button type="button" className="back" value="click" onClick={() => handleClick()}><AiOutlineLeft /></button>
-                {data.favourite===true ?
-                    <button type="button" className="fav" value="click" onClick={()=>toggleFavorites(data.idMeal)} ><AiFillStar/></button>
-                :
-                    <button type="button" className="fav" value="click" onClick={()=>toggleFavorites(data.idMeal)}><AiOutlineStar/></button>
+                {data.favourite === true ?
+                    <button type="button" className="fav" value="click" onClick={() => toggleFavorites(data.idMeal)} ><AiFillStar /></button>
+                    :
+                    <button type="button" className="fav" value="click" onClick={() => toggleFavorites(data.idMeal)}><AiOutlineStar /></button>
                 }
             </div>
             <img className="detail-meal__image" src={data.strMealThumb} alt={data.strMeal}></img>
@@ -36,17 +30,15 @@ function detailMeal(data, handleClick,toggleFavorites) {
                 <div className="detail-meal__instructions">{data.strInstructions}</div>
             </div>
         </div>);
-        
+
 
 };
 
 
-const DetailCard = ({ data, handleClick,toggleFavorites,favs }) => {
-    debugger
-    
+const DetailCard = ({ data, handleClick, toggleFavorites, favs }) => {
     return (
         <div className="detail-info">
-            {data ? detailMeal(data, handleClick, toggleFavorites) : loading()}
+            {data ? detailMeal(data, handleClick, toggleFavorites) : <Loader/>}
         </div>
     );
 };

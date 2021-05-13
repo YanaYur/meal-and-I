@@ -1,14 +1,10 @@
 import React from 'react';
 
 import FavouriteCard from './FavouriteCard/index';
+import Loader from '../Loader';
 
 import './styles.scss';
 
-function loading() {
-    return (
-        <div>Loading...</div>
-    )
-}
 
 function favoritesToPrint(data) {
 
@@ -20,8 +16,8 @@ const FoundList = ({ data }) => {
     return (
         <>
             <div className="favorites-meals">
-
-                {data && data.length > 0 ? favoritesToPrint(data) : loading()}
+           
+                {data && data.length > 0 ? favoritesToPrint(data) : <Loader/>}
 
             </div>
         </>

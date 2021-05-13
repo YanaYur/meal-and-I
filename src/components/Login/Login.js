@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext'
 import { Link, useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setUser } from '../../redux/acctions';
+
+
 
 import logo from '../../assets/images/logo.2.png';
 import './styles.scss';
@@ -17,8 +17,6 @@ export default function Login() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const history = useHistory();
-    const dispatch = useDispatch();
-
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -49,8 +47,8 @@ export default function Login() {
                 <div className="login-form-submit-password">
                     <input type="password" placeholder="Password" ref={passwordRef} required></input>
                 </div>
-                <button disabled={loading} className="submit" type="submit">Log In</button>
-                <div className="create-account"> Don't have an account ? <Link to="/signup"> Sign Up </Link> </div>
+                <button disabled={loading} className="submit" type="submit"><strong>Login</strong></button>
+                <div className="create-account"> Don't have an account? <Link to="/signup"><strong>Sign Up</strong></Link> </div>
             </form>
         </div>
     )
