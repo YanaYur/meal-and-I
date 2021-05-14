@@ -2,7 +2,7 @@
 
 ![Meal&I_logo](src/assets/images/logo.2.png)
 
-Check the website here: [Meal&I](https://https://meal-and-i.web.app/).
+Check the website here: [Meal&I](https://meal-and-i.web.app/).
 
 ## Project Description
 
