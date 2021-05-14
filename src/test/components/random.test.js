@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import Random from '../../components/Random/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-test.skip('renders content with random meal', () => {
+test('renders content with random meal', () => {
     // Arange
     let data = {
         "meals": [
