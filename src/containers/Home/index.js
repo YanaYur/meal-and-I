@@ -40,7 +40,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="home">
+     <div className="home">
         <Header />
         <MainIngredients data={ingredients} />
         <TrendyMeals data={trendy} />

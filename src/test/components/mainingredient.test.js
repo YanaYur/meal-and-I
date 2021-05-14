@@ -5,7 +5,7 @@ import MainIngredients from '../../components/MainIngredient/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
-test.skip('renders content with ingredients', () => {
+test('renders content with ingredients', () => {
     // Arange
     let ingredients = [{
         "idIngredient": "1",

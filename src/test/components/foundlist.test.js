@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import FoundList from '../../components/FoundList/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-test.skip('renders content with found meals list', () => {
+test('renders content with found meals list', () => {
     // Arange
     let data = [{
         "strMeal": "Chick-Fil-A Sandwich",

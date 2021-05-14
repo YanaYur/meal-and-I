@@ -10,6 +10,7 @@ function getIngredientsOptions(input) {
 }
 
 async function getMainIngredients() {
+    console.log(process.env.REACT_APP_API_URL_BASE)
     const { data } = await axios.get(`${process.env.REACT_APP_API_URL_BASE}list.php?i=list`);
     const newData = data.meals.slice(0, 15);
     return newData;
