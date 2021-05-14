@@ -19,10 +19,10 @@ User experience once logged in:
 - Add favorites
 - Edit profile
 #### User flow
-![user_flow](src/assets/images/user_flow.png);
+![user_flow](src/assets/images/user_flow.png)
 
 ### Tecnologies
-![Tecnologies](src/assets/images/tecnologies.png);
+![Tecnologies](src/assets/images/tecnologies.png)
 
 ### Data structure
 ```
@@ -67,4 +67,4 @@ ingredient {
 } 
 ```
 ## Product
-![Login](src/assets/images/app/app.login.png) ![signup](src/assets/images/app/app.signup.png) ![Home](src/assets/images/app/app.home.png) ![Search](src/assets/images/app/app.search.png) ![Detail](src/assets/images/app/app.detail.png) ![Fav](src/assets/images/app/app.favorites.png) ![Profile](src/assets/images/app/app.profile.png)
+![Login](src/assets/images/app/app.login.PNG) ![signup](src/assets/images/app/app.signup.PNG) ![Home](src/assets/images/app/app.home.PNG) ![Search](src/assets/images/app/app.search.PNG) ![Detail](src/assets/images/app/app.detail.PNG) ![Fav](src/assets/images/app/app.favorites.PNG) ![Profile](src/assets/images/app/app.profile.PNG)
