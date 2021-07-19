@@ -45,22 +45,22 @@ export default function Signup() {
                 <img src={logo} alt="logo"></img>
             </div>
             <form className="signup-form-submit" onSubmit={handleSubmit}>
-                {error && <p>error</p>}
+                {error && <p>Wrong password</p>}
                 <div className="signup-form-submit-name" >
 
-                    <input type="text" placeholder="enter your name" ref={nameRef} required></input>
+                    <input type="text" placeholder="Enter your name" ref={nameRef} required></input>
                 </div>
                 <div className="signup-form-submit-email">
 
-                    <input type="email" placeholder="email" ref={emailRef} required></input>
+                    <input type="email" placeholder="Email" ref={emailRef} required></input>
                 </div>
                 <div className="signup-form-submit-password">
 
-                    <input type="password" placeholder="password" ref={passwordRef} required></input>
+                    <input type="password" placeholder="Password" ref={passwordRef} required></input>
                 </div>
                 <div className="signup-form-submit-password-confirmation">
 
-                    <input type="password" placeholder="password confirmation" ref={passwordConfirmRef} required></input>
+                    <input type="password" placeholder="Password confirmation" ref={passwordConfirmRef} required></input>
                     <button disabled={loading} className="submit" type="submit"><strong>Sign Up</strong></button>
                 </div>
                 <div className="already-have">Already have an account? <Link to="/"><strong>Login</strong></Link> </div>

@@ -1,17 +1,42 @@
-$primarycolor: #adefd1ff;
+$primarycolor: #ffbb99;
 $secondarycolor: #00203fff;
 
 body {
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0;
+    margin: auto;
     font-family: "Roboto Mono", monospace;
     color: black;
-
+    max-width: 400px;
+    
     a {
         text-decoration: none;
         font-size: 14px;
         color: black;
     }
-   
+}
+
+.container {
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -40,7 +40,7 @@ export default function Login() {
                 <img src={logo} alt="logo"></img>
             </div>
             <form className="login-form-submit" onSubmit={handleSubmit}>
-                {error && <p>Error</p>}
+                {error && <p>Wrong password</p>}
                 <div className="login-form-submit-email">
                     <input type="email" placeholder="Email" ref={emailRef} required></input>
                 </div>

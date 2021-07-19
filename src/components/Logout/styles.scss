@@ -14,10 +14,17 @@
         color: rgb(247, 247, 247);
         border: 1px solid #ff914d;
         background-color: #ffbb99;
+
         svg {
             color: #f5f1ef;
             width: 15px;
             height: 15px;
         }
+        
     }
+    button:hover{
+            background-color: #ff914d;
+            cursor: pointer;
+    }
+
 }
