@@ -18,7 +18,7 @@ const Favorites = () => {
     useEffect( () => {
         fetchFavorites();
     }, []);
-
+    
     async function fetchFavorites(){
         const favoritesList = await Logic.getMealsByIds(favoritesSelected);
         setFavorites(favoritesList);

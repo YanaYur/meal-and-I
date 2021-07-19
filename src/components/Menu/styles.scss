@@ -3,7 +3,7 @@ $secondarycolor: #00203fff;
 
 .menu-buttons {
     padding-top: 10px;
-    width: 95%;
+    min-width: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -13,9 +13,7 @@ $secondarycolor: #00203fff;
     bottom: 0;
     position: fixed;
 
-
     &__buttons {
-     
         background-color: white;
         width: 100%;
         height: 100%;
@@ -26,9 +24,14 @@ $secondarycolor: #00203fff;
             height: 25px;
             color: rgb(94, 94, 94);
         }
-        
+
         a {
             text-decoration: none;
+        }
+    }
+    @media (max-width: 400px) {
+        .menu-buttons {
+            width: 100vw;
         }
     }
 }

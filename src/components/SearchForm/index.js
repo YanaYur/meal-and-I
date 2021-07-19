@@ -1,10 +1,8 @@
-import { React, useRef, useState } from 'react';
+import { React, useRef } from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosAdd } from "react-icons/io";
 import SelectedFormFilters from '../SelectedFormFilters'
 import './styles.scss';
-
-
 
 const SearchForm = ({ data, handleSearch, handleRemove, handleAdd, handlUpdateOptions, options }) => {
     const input = useRef(null);
@@ -27,7 +25,7 @@ const SearchForm = ({ data, handleSearch, handleRemove, handleAdd, handlUpdateOp
                 <input className="search-form__input" list="ingredients" onChange={() => handlUpdateOptions(input.current.value)} ref={input} type="text" id="search" placeholder="Search by name o ingredients..."
                 />
                 <datalist className="search-form__datalist" id="ingredients">
-                    {options.map(option => <option value={option} />)}
+                    {options.map(option => <option value={option} key={option} />)}
                 </datalist>
 
 

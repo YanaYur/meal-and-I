@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import TrendyMeals from '../../components/TrendyMeals/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-test.skipw('renders content with trendy meals', () => {
+test('renders content with trendy meals', () => {
     // Arange
     let data = [{
         "idMeal": "53038",

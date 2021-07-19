@@ -1,3 +1,5 @@
+@import '../../assets/styles/config.scss';
+
 .signup-form {
     display: flex;
     flex-direction: column;
@@ -32,6 +34,8 @@
                 border-radius: 20px;
                 border: 1px solid #ffbb99;
                 font-size: 15px;
+                padding-left: 5px;
+                outline: none;
             }
         }
         &-email {
@@ -44,6 +48,8 @@
                 border-radius: 20px;
                 border: 1px solid #ffbb99;
                 font-size: 15px;
+                padding-left: 5px;
+                outline: none;
             }
         }
         &-password {
@@ -56,6 +62,8 @@
                 border-radius: 20px;
                 border: 1px solid #ffbb99;
                 font-size: 15px;
+                padding-left: 5px;
+                outline: none;
             }
         }
         &-password-confirmation {
@@ -69,11 +77,13 @@
                 border-radius: 20px;
                 border: 1px solid #ffbb99;
                 font-size: 15px;
+                padding-left: 5px;
+                outline: none;
             }
         }
     }
     button {
-        width:100%;
+        width:102%;
         margin-top: 10px;
         padding-top: 10px;
         padding-bottom: 10px;

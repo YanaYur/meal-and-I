@@ -65,8 +65,8 @@ const Search = () => {
 
   return (
     <>
-      <Header />
-      <div className="search">
+      <div className="container">
+        <Header />
         <SearchForm data={selectedIngredients}
           handleSearch={handleSearch}
           handleRemove={handleRemove}
@@ -76,9 +76,7 @@ const Search = () => {
         <Title name="CHOOSE YOUR MEAL" />
         <FoundList data={meals} />
       </div>
-      <div className="menu">
-        <Menu />
-      </div>
+      <Menu />
     </>
   );
 }
