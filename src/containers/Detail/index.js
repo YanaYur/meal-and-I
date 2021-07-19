@@ -24,10 +24,8 @@ const Detail = () => {
     const mealId = params.get('mealId');
     
     async function handleDetail() {
-      debugger
       const detailedMeal = await Logic.getMealById(mealId);
       const meal = detailedMeal.meals[0];
-      debugger
       const favourite = favoritesSelected.includes(meal.idMeal);
 
       setDetail({ ...meal, favourite });
